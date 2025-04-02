@@ -1,7 +1,6 @@
 # Development Guidelines
 
-> **Important**  
->  
+> [!IMPORTANT]  
 > All commits must include code formatting, and the code should be tested and built without errors before committing and pushing to the remote branch.
 
 ## Code Formatting
