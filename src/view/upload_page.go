@@ -292,16 +292,26 @@ const UploadPageTmpl string = `<!DOCTYPE html>
       }
     });
 
+    errorReset = function() {
+      while (error.childNodes.length > 1) {
+        error.removeChild(error.lastChild)
+      }
+    }
+
     ufile.onchange = function () {
       if (this.files[0]) {
         // reset
         error.style.display = "none"
+        errorReset()
       }
     }
 
     uform.addEventListener("submit", (e) => {
       e.preventDefault();
       if (ufile.value === undefined || ufile.value === "") {
+        // reset
+        errorReset()
+
         error.style.display = "block"
         error.appendChild(document.createTextNode(errmsg));
         return
