@@ -5,7 +5,7 @@
 package main
 
 const (
-	appBuild string = "0.1.0"
+	appBuild string = "0.1.1"
 )
 
 const (
