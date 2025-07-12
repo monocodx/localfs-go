@@ -38,14 +38,12 @@ func (s *server) initStorage() {
 	userHome, err := os.UserHomeDir()
 	if err != nil {
 		log.Fatal("FATAL", err)
-		return
 	}
 
 	path := filepath.Join(userHome, defaultStorage)
 	err = fsutil.Mkdir(path)
 	if err != nil {
 		log.Fatal("FATAL", err)
-		return
 	}
 
 	appCache[ckey_storage] = path
